@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		97A5B96D28F5B3820025246F /* signUpFormModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5B96C28F5B3820025246F /* signUpFormModelValidator.swift */; };
+		97A5B96D28F5B3820025246F /* signUpFormModelValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5B96C28F5B3820025246F /* signUpFormModelValidatorTests.swift */; };
+		97A5B96F28F5BA190025246F /* signUpFormModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5B96E28F5BA190025246F /* signUpFormModelValidator.swift */; };
 		97B4B36128F5AD8C00F38913 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B4B36028F5AD8C00F38913 /* AppDelegate.swift */; };
 		97B4B36328F5AD8C00F38913 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B4B36228F5AD8C00F38913 /* SceneDelegate.swift */; };
 		97B4B36528F5AD8C00F38913 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B4B36428F5AD8C00F38913 /* ViewController.swift */; };
@@ -27,7 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		97A5B96C28F5B3820025246F /* signUpFormModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpFormModelValidator.swift; sourceTree = "<group>"; };
+		97A5B96C28F5B3820025246F /* signUpFormModelValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpFormModelValidatorTests.swift; sourceTree = "<group>"; };
+		97A5B96E28F5BA190025246F /* signUpFormModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpFormModelValidator.swift; sourceTree = "<group>"; };
 		97B4B35D28F5AD8C00F38913 /* PhotoAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97B4B36028F5AD8C00F38913 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97B4B36228F5AD8C00F38913 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				97B4B36928F5AD8D00F38913 /* Assets.xcassets */,
 				97B4B36B28F5AD8D00F38913 /* LaunchScreen.storyboard */,
 				97B4B36E28F5AD8D00F38913 /* Info.plist */,
+				97A5B96E28F5BA190025246F /* signUpFormModelValidator.swift */,
 			);
 			path = PhotoAPP;
 			sourceTree = "<group>";
@@ -92,7 +95,7 @@
 		97B4B37628F5AD8E00F38913 /* PhotoAPPTests */ = {
 			isa = PBXGroup;
 			children = (
-				97A5B96C28F5B3820025246F /* signUpFormModelValidator.swift */,
+				97A5B96C28F5B3820025246F /* signUpFormModelValidatorTests.swift */,
 			);
 			path = PhotoAPPTests;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			files = (
 				97B4B36528F5AD8C00F38913 /* ViewController.swift in Sources */,
 				97B4B36128F5AD8C00F38913 /* AppDelegate.swift in Sources */,
+				97A5B96F28F5BA190025246F /* signUpFormModelValidator.swift in Sources */,
 				97B4B36328F5AD8C00F38913 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,7 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97A5B96D28F5B3820025246F /* signUpFormModelValidator.swift in Sources */,
+				97A5B96D28F5B3820025246F /* signUpFormModelValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
