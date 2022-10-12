@@ -26,5 +26,13 @@ final class signUpFormModelValidatorTests: XCTestCase {
         //Assert
         XCTAssertTrue(isFirstNameValid,"tisFirstNameValid () supposed to return true ")
     }
+    
+    func testSignupFormValidator_isFirstnameTooShort_ReturnsTrue () {
+        
+        let sut = signUpFormModelValidator()
+        let isFirstNameTooShort = sut.isfirstnameValid(firstname:"s")
+        XCTAssertFalse(isFirstNameTooShort,"isfirstnameValid () supposed to return true")
+        
+    }
 
 }
