@@ -31,11 +31,10 @@ final class signUpFormModelValidatorTests: XCTestCase {
         XCTAssertTrue(isFirstNameValid,"tisFirstNameValid () supposed to return true ")
     }
     
-    func testSignupFormValidator_isFirstnameTooShort_ReturnsTrue () {
+    func testSignupFormValidator_isFirstnameTooShort_ReturnsFalse () {
         
-        let sut = signUpFormModelValidator()
         let isFirstNameTooShort = sut.isfirstnameValid(firstname:"s")
-        XCTAssertFalse(isFirstNameTooShort,"isfirstnameValid () supposed to return true")
+        XCTAssertFalse(isFirstNameTooShort,"isfirstnameValid () returned false , more than \(SignupConstatns.firstNameminValue) characters")
         
     }
     
@@ -44,7 +43,7 @@ final class signUpFormModelValidatorTests: XCTestCase {
         
         let isfirstNameValid = sut.isfirstnameValid(firstname: "surajSuraj")
         
-        XCTAssertFalse(isfirstNameValid , "tisFirstNameValid () returned false ,more than is 10 characters")
+        XCTAssertFalse(isfirstNameValid , "tisFirstNameValid () returned false ,more than is \(SignupConstatns.firstNamemaxValue) characters")
     }
 
 }

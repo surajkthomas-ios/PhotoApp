@@ -15,6 +15,7 @@
 		97B4B36828F5AD8C00F38913 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B4B36628F5AD8C00F38913 /* Main.storyboard */; };
 		97B4B36A28F5AD8D00F38913 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97B4B36928F5AD8D00F38913 /* Assets.xcassets */; };
 		97B4B36D28F5AD8D00F38913 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B4B36B28F5AD8D00F38913 /* LaunchScreen.storyboard */; };
+		97D950D728F6E6F500EBFD2B /* SignupConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D950D628F6E6F500EBFD2B /* SignupConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		97B4B36C28F5AD8D00F38913 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97B4B36E28F5AD8D00F38913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97B4B37328F5AD8E00F38913 /* PhotoAPPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoAPPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97D950D628F6E6F500EBFD2B /* SignupConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				97B4B36B28F5AD8D00F38913 /* LaunchScreen.storyboard */,
 				97B4B36E28F5AD8D00F38913 /* Info.plist */,
 				97A5B96E28F5BA190025246F /* signUpFormModelValidator.swift */,
+				97D950D628F6E6F500EBFD2B /* SignupConstants.swift */,
 			);
 			path = PhotoAPP;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				97B4B36528F5AD8C00F38913 /* ViewController.swift in Sources */,
 				97B4B36128F5AD8C00F38913 /* AppDelegate.swift in Sources */,
 				97A5B96F28F5BA190025246F /* signUpFormModelValidator.swift in Sources */,
+				97D950D728F6E6F500EBFD2B /* SignupConstants.swift in Sources */,
 				97B4B36328F5AD8C00F38913 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
