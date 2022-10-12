@@ -9,18 +9,22 @@ import XCTest
 @testable import PhotoAPP
 final class signUpFormModelValidatorTests: XCTestCase {
 
+    var sut : signUpFormModelValidator!
     override func setUpWithError() throws {
+        
+        sut = signUpFormModelValidator ()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDownWithError() throws {
+        
+        sut = nil
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
     func testSignupFormValidator_firstnameValid_ReturnsTrue (){
         
         //Arrange
-        let sut = signUpFormModelValidator()
         //Act
       let isFirstNameValid =  sut.isfirstnameValid(firstname : "suraj")
         //Assert
