@@ -11,7 +11,7 @@ class signUpFormModelValidator {
     func isfirstnameValid (firstname : String)->Bool {
         
         var returnval = true
-        if firstname.count < 3 {
+        if firstname.count < 3 || firstname.count >= 10 {
             returnval = false
         }
         return returnval
