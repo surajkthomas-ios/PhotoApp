@@ -22,12 +22,22 @@ class signUpFormModelValidator {
         
         var returnVal =  true
         
-        if lastName.count < 2 || lastName.count > 10 {
+        if lastName.count < SignupConstatns.lastNameminValue || lastName.count > SignupConstatns.lastNamemaxValue {
             
             returnVal = false
         }
         return returnVal
         
+    }
+    
+    func isPasswordValid(password : String)-> Bool {
+        
+        var returnval = true
+        
+        if password.count < SignupConstatns.passwordminValue || password.count > SignupConstatns.passwordmaxValue {
+            returnval = false
+        }
+        return returnval
     }
     
 }

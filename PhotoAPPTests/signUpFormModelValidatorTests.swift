@@ -61,5 +61,24 @@ final class signUpFormModelValidatorTests: XCTestCase {
         let isLastNameValid = sut.isLastNameValid(lastName: "Thomasthomas")
         XCTAssertFalse(isLastNameValid , "isLastNameValid () returned false , more than 10 characters")
     }
-
+    
+    func testSignupFormValidator_isPasswordTooShort_returnsTrue () {
+        
+        let isPasswordValid = sut.isPasswordValid(password : "pas")
+        XCTAssertTrue(isPasswordValid , "password too short")
+        
+    }
+    
+    func testSignupFormValidator_isPasswordTooLong_returnsFalse () {
+        
+        let isPasswordValid = sut.isPasswordValid(password : "passwoasdasdasd")
+        XCTAssertFalse(isPasswordValid , "password too long")
+    }
+    
+    
+    func testSignupFormValidator_isPassword_returnsFalse () {
+        
+        let isPasswordValid = sut.isPasswordValid(password : "passwoasdasdasd")
+        XCTAssertFalse(isPasswordValid , "password too long")
+    }
 }
