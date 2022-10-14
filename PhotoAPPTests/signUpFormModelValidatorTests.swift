@@ -76,9 +76,17 @@ final class signUpFormModelValidatorTests: XCTestCase {
     }
     
     
-    func testSignupFormValidator_isPassword_returnsFalse () {
+    func testSignupFormValidator_isPasswordsMatch_returnsTrue () {
         
-        let isPasswordValid = sut.isPasswordValid(password : "passwoasdasdasd")
-        XCTAssertFalse(isPasswordValid , "password too long")
+        let isPasswordsEqual = sut.isPasswordsEqual(password : "1234", repeatPassword :"1234")
+        XCTAssertTrue(isPasswordsEqual , "passwords not equal")
     }
+    
+    func testSignupFormValidator_isPasswordsMatch_returnsFalse () {
+        
+        let isPasswordsEqual = sut.isPasswordsEqual(password : "124", repeatPassword :"1234")
+        XCTAssertFalse(isPasswordsEqual , "passwords  equal")
+        
+    }
+    
 }

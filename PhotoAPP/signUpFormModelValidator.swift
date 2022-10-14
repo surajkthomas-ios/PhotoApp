@@ -39,5 +39,16 @@ class signUpFormModelValidator {
         }
         return returnval
     }
+    func isPasswordsEqual(password : String ,repeatPassword : String) -> Bool {
+        var returnval = true
+         if password != repeatPassword {
+            returnval = false
+        }
+        return returnval
+    }
+    
+    
+    
+    
     
 }
