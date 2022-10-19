@@ -8,5 +8,6 @@
 import Foundation
 struct signupResponseModel {
     
+    let status : String
     
 }
