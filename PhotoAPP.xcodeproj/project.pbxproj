@@ -92,19 +92,13 @@
 		97B4B35F28F5AD8C00F38913 /* PhotoAPP */ = {
 			isa = PBXGroup;
 			children = (
+				97FA7115290031C30081B875 /* SignUp */,
 				97B4B36028F5AD8C00F38913 /* AppDelegate.swift */,
 				97B4B36228F5AD8C00F38913 /* SceneDelegate.swift */,
-				97B4B36428F5AD8C00F38913 /* ViewController.swift */,
 				97B4B36628F5AD8C00F38913 /* Main.storyboard */,
 				97B4B36928F5AD8D00F38913 /* Assets.xcassets */,
 				97B4B36B28F5AD8D00F38913 /* LaunchScreen.storyboard */,
 				97B4B36E28F5AD8D00F38913 /* Info.plist */,
-				97A5B96E28F5BA190025246F /* signUpFormModelValidator.swift */,
-				9757B8E6290029F4008938AE /* SignupFormRequestModel.swift */,
-				97D950D628F6E6F500EBFD2B /* SignupConstants.swift */,
-				9746410B28FEC102009115FC /* Signupwebservice.swift */,
-				97FA711129002F7E0081B875 /* signupResponseModel.swift */,
-				97FA71132900302E0081B875 /* signupError.swift */,
 			);
 			path = PhotoAPP;
 			sourceTree = "<group>";
@@ -112,10 +106,64 @@
 		97B4B37628F5AD8E00F38913 /* PhotoAPPTests */ = {
 			isa = PBXGroup;
 			children = (
-				97A5B96C28F5B3820025246F /* signUpFormModelValidatorTests.swift */,
-				9746410928FEC075009115FC /* signupWebservicesTest.swift */,
+				97FA711A290032CB0081B875 /* Model */,
+				97FA7119290032C00081B875 /* Network */,
 			);
 			path = PhotoAPPTests;
+			sourceTree = "<group>";
+		};
+		97FA7115290031C30081B875 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				97FA7118290032150081B875 /* Network */,
+				97FA7117290031F50081B875 /* ViewControllers */,
+				97FA7116290031E10081B875 /* models */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		97FA7116290031E10081B875 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				97D950D628F6E6F500EBFD2B /* SignupConstants.swift */,
+				97A5B96E28F5BA190025246F /* signUpFormModelValidator.swift */,
+				9757B8E6290029F4008938AE /* SignupFormRequestModel.swift */,
+				97FA711129002F7E0081B875 /* signupResponseModel.swift */,
+				97FA71132900302E0081B875 /* signupError.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		97FA7117290031F50081B875 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				97B4B36428F5AD8C00F38913 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		97FA7118290032150081B875 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9746410B28FEC102009115FC /* Signupwebservice.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		97FA7119290032C00081B875 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9746410928FEC075009115FC /* signupWebservicesTest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		97FA711A290032CB0081B875 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				97A5B96C28F5B3820025246F /* signUpFormModelValidatorTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
