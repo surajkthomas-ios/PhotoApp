@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct signupResponseModel {
+struct signupResponseModel:Decodable {
     
     let status : String
     

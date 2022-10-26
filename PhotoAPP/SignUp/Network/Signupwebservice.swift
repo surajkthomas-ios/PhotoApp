@@ -27,7 +27,16 @@ private  var urlstring:String
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.httpBody = try? JSONEncoder ().encode(formodel)
         
-        let datatask = URLSession.shared.dataTask(with: request) { datatask, URLResponse, errorr in
+        let datatask = URLSession.shared.dataTask(with: request) { data, URLResponse, errorr in
+            
+            // TODO: unit test to handle error
+            
+            if let data = data , let signupresponsemodel = try? JSONDecoder().decode(signupResponseModel.self,from: data){
+          completion(signupresponsemodel,nil)
+                
+            }else {
+                //TODO: unit test to handle error
+            }
             
         }
         
