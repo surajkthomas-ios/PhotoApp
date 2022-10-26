@@ -19,7 +19,7 @@ final class signupWebservicesTest: XCTestCase {
     }
     func testSignupwebservice_GivenSuccesfulResponse_whenreturnsSuccess () {
        //arrange
-        let sut = Signupwebservice(urlstring : "")
+        let sut = Signupwebservice(urlstring : "http://appsdeveloperblog.com:8080/signup-mock-service/users")
         let customExpectation = self.expectation(description: "custom expectation")
         let signupmodel = SignupFormRequestModel(firstname: "suraj", lastname: "thomas", email: "surajt@gmail.com", password: "12345678")
        //act

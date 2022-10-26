@@ -9,12 +9,14 @@ import Foundation
 class Signupwebservice {
     
 private  var urlstring:String
+    
     init(urlstring: String) {
         self.urlstring = urlstring
     }
     
     func  signup (formodel : SignupFormRequestModel, completion : @escaping (signupResponseModel?, signupError? ) -> Void) {
         guard let url = URL(string: urlstring) else{
+           // TODO: create unit test for specific error message  for url is nil
             return
         }
         var request = URLRequest(url: url)
@@ -22,6 +24,12 @@ private  var urlstring:String
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.httpBody = try? JSONEncoder ().encode(formodel)
+        
+        let datatask = URLSession.shared.dataTask(with: request) { datatask, URLResponse, errorr in
+            
+        }
+        
+        datatask.resume()
     }
     
 }
