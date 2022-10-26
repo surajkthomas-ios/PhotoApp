@@ -32,7 +32,8 @@ private  var urlstring:String
             // TODO: unit test to handle error
             
             if let data = data , let signupresponsemodel = try? JSONDecoder().decode(signupResponseModel.self,from: data){
-          completion(signupresponsemodel,nil)
+         
+                completion(signupresponsemodel,nil)
                 
             }else {
                 //TODO: unit test to handle error
