@@ -9,9 +9,11 @@ import Foundation
 class Signupwebservice {
     
 private  var urlstring:String
+    private var urlsession: URLSession
     
-    init(urlstring: String) {
+    init(urlstring: String, urlsession:URLSession = .shared) {
         self.urlstring = urlstring
+        self.urlsession = urlsession
     }
     
     func  signup (formodel : SignupFormRequestModel, completion : @escaping (signupResponseModel?, signupError? ) -> Void) {
