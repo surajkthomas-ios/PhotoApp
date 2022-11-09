@@ -8,7 +8,7 @@
 import XCTest
 @testable import PhotoAPP
 
-final class signupWebservicesTest: XCTestCase {
+final class SignupWebservicesTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,15 +20,15 @@ final class signupWebservicesTest: XCTestCase {
     func testSignupwebservice_GivenSuccesfulResponse_whenreturnsSuccess () {
        //arrange
         let sut = SignupWebservice(urlstring : "http://appsdeveloperblog.com:8080/signup-mock-service/users")
-        let customExpectation = self.expectation(description: "custom expectation")
+        let expectation  = self.expectation(description: "signup webservice expectation")
         let signupmodel = SignupFormRequestModel(firstName: "suraj", lastName: "thomas", email: "surajt@gmail.com", password: "12345678")
        //act
         sut.signup (withForm : signupmodel) { (signupResponse, error) in
         //assert
             XCTAssertEqual(signupResponse?.status, "OK")
-            customExpectation.fulfill()
+            expectation .fulfill()
         }
-        self.wait(for: [customExpectation], timeout: 3)
+        self.wait(for: [expectation ], timeout: 3)
     }
 
 }
