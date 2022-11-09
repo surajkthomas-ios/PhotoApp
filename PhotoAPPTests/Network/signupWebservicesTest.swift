@@ -19,11 +19,11 @@ final class signupWebservicesTest: XCTestCase {
     }
     func testSignupwebservice_GivenSuccesfulResponse_whenreturnsSuccess () {
        //arrange
-        let sut = Signupwebservice(urlstring : "http://appsdeveloperblog.com:8080/signup-mock-service/users")
+        let sut = SignupWebservice(urlstring : "http://appsdeveloperblog.com:8080/signup-mock-service/users")
         let customExpectation = self.expectation(description: "custom expectation")
-        let signupmodel = SignupFormRequestModel(firstname: "suraj", lastname: "thomas", email: "surajt@gmail.com", password: "12345678")
+        let signupmodel = SignupFormRequestModel(firstName: "suraj", lastName: "thomas", email: "surajt@gmail.com", password: "12345678")
        //act
-        sut.signup (formodel : signupmodel) { (signupResponse, error) in
+        sut.signup (withForm : signupmodel) { (signupResponse, error) in
         //assert
             XCTAssertEqual(signupResponse?.status, "OK")
             customExpectation.fulfill()

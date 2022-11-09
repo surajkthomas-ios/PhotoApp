@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum signupError {
+enum SignupError {
     
     
 }

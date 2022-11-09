@@ -9,8 +9,8 @@ import Foundation
 
 struct SignupFormRequestModel : Encodable {
     
-    let  firstname : String
-    let  lastname : String
+    let  firstName : String
+    let  lastName : String
     let  email : String
     let  password : String
     
