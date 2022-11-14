@@ -6,42 +6,41 @@
 //
 
 import Foundation
-class SignupWebservice {
+class SignupWebService {
     
-private  var urlstring:String
-    private var urlsession: URLSession
+    private var urlSession: URLSession
+    private var urlString: String
     
-    init(urlstring: String, urlsession:URLSession = .shared) {
-        self.urlstring = urlstring
-        self.urlsession = urlsession
+    init(urlString: String, urlSession: URLSession = .shared) {
+        self.urlString = urlString
+        self.urlSession = urlSession
     }
     
-    func  signup (withForm  formModel: SignupFormRequestModel, completion : @escaping (SignupResponseModel?, SignupError? ) -> Void) {
-        guard let url = URL(string: urlstring) else{
-           // TODO: create unit test for specific error message  for url is nil
+    func signup(withForm formModel: SignupFormRequestModel, completionHandler: @escaping (SignupResponseModel?, SignupError?) -> Void) {
+        guard let url = URL(string: urlString) else {
+            completionHandler(nil, SignupError.invalidRequestURLString)
             return
         }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
-        request.httpBody = try? JSONEncoder ().encode(formModel)
+        request.httpBody = try? JSONEncoder().encode(formModel)
         
-        let datatask = URLSession.shared.dataTask(with: request) { data, URLResponse, errorr in
+        let dataTask = urlSession.dataTask(with: request) { (data, response, error) in
             
-            // TODO: unit test to handle error
-            
-            if let data = data , let signupresponsemodel = try? JSONDecoder().decode(SignupResponseModel.self,from: data){
-         
-                completion(signupresponsemodel,nil)
-                
-            }else {
-                //TODO: unit test to handle error
+            if let requestError = error {
+                completionHandler(nil, SignupError.failedRequest(description: requestError.localizedDescription))
+                return
             }
             
+            if let data=data, let signupResponseModel = try? JSONDecoder().decode(SignupResponseModel.self, from: data) {
+                completionHandler(signupResponseModel, nil)
+            } else {
+                completionHandler(nil, SignupError.invalidResponseModel)
+            }
         }
         
-        datatask.resume()
+        dataTask.resume()
     }
-    
 }

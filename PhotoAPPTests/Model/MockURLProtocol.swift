@@ -1,14 +1,11 @@
 //
 //  MockURLProtocol.swift
-//  PhotoAppTests
+//  PhotoAPPTests
 //
-//  Created by Sergey Kargopolov on 2020-03-10.
-//  Copyright © 2020 Sergey Kargopolov. All rights reserved.
+//  Created by suraj thomas on 10/11/22.
 //
 
 import Foundation
-
-
 class MockURLProtocol: URLProtocol {
     
     static var stubResponseData: Data?

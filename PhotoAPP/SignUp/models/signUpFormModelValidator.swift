@@ -11,7 +11,7 @@ class signUpFormModelValidator {
     func isfirstnameValid (firstname : String)->Bool {
         
         var returnval = true
-        if firstname.count < SignupConstatns.firstNameminValue || firstname.count >= SignupConstatns.firstNamemaxValue {
+        if firstname.count < SignupConstants.firstNameminValue || firstname.count >= SignupConstants.firstNamemaxValue {
             returnval = false
         }
         return returnval
@@ -22,7 +22,7 @@ class signUpFormModelValidator {
         
         var returnVal =  true
         
-        if lastName.count < SignupConstatns.lastNameminValue || lastName.count > SignupConstatns.lastNamemaxValue {
+        if lastName.count < SignupConstants.lastNameminValue || lastName.count > SignupConstants.lastNamemaxValue {
             
             returnVal = false
         }
@@ -34,7 +34,7 @@ class signUpFormModelValidator {
         
         var returnval = true
         
-        if password.count < SignupConstatns.passwordminValue || password.count > SignupConstatns.passwordmaxValue {
+        if password.count < SignupConstants.passwordminValue || password.count > SignupConstants.passwordmaxValue {
             returnval = false
         }
         return returnval
