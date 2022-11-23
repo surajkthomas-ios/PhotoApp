@@ -33,27 +33,6 @@ class SignupWebServiceTests: XCTestCase {
     }
     
     
-    func testSignupWebService_WhenGivenSuccessfullResponse_ReturnsSuccess() {
-        
-        // Arrange
-        let jsonString = "{\"status\":\"ok\"}"
-        MockURLProtocol.stubResponseData =  jsonString.data(using: .utf8)
-        
-        let expectation = self.expectation(description: "Signup Web Service Response Expectation")
-        
-        // Act
-        sut.signup(withForm: signFormRequestModel) { (signupResponseModel, error) in
-            
-            // Assert
-            //"{\"status\":\"ok\"}"
-            XCTAssertEqual(signupResponseModel?.status, "ok")
-            expectation.fulfill()
-            
-        }
-        
-        self.wait(for: [expectation], timeout: 5)
-        
-    }
     
    
 }
