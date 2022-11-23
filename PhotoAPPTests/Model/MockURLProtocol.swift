@@ -21,13 +21,13 @@ class MockURLProtocol: URLProtocol {
     
     
     override func startLoading() {
- 
+        //stubbed error and response
         if let signupError = MockURLProtocol.error {
             self.client?.urlProtocol(self, didFailWithError: signupError)
         } else {
             self.client?.urlProtocol(self, didLoad: MockURLProtocol.stubResponseData ?? Data())
         }
- 
+        
         self.client?.urlProtocolDidFinishLoading(self)
     }
     
