@@ -37,7 +37,7 @@ class SignupWebService {
             if let data=data, let signupResponseModel = try? JSONDecoder().decode(SignupResponseModel.self, from: data) {
                 completionHandler(signupResponseModel, nil)
             } else {
-                //MARK:TODO
+                completionHandler(nil,SignupError.invalidResponseModel)
                 
             }
         }
